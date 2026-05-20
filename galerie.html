@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - RECOR Afrik Mag</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item-large {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #003DA5, #E31E24);
+            cursor: pointer;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item-large:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-item-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .gallery-item-large:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay-text {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-overlay-desc {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-text">
+                    <div class="logo-red">RECOR</div>
+                    <div class="logo-blue">Afrik<span class="logo-mag">mag</span></div>
+                    <div class="logo-subtitle">Le magazine Panafricain</div>
+                </div>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="videos.html">Vidéos</a></li>
+                <li><a href="abonnement.html">Abonnement</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Overlay pour mobile -->
+        <div class="menu-overlay"></div>
+
+        <!-- Sidebar Menu pour mobile -->
+        <div class="sidebar-menu">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="videos.html">Vidéos</a></li>
+                <li><a href="abonnement.html">Abonnement</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Galerie Photos</h1>
+        <p>Découvrez nos plus belles photographies panafricaines</p>
+    </div>
+
+    <!-- Page Content -->
+    <section class="page-content">
+        <div class="gallery-grid">
+            <div class="gallery-item-large">
+                <div style="background: linear-gradient(135deg, #003DA5, #FF6B35); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;"><i class="fas fa-city"></i></div>
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Développement Urbain</div>
+                    <div class="gallery-overlay-desc">Les villes africaines se transforment et modernisent leurs infrastructures</div>
+                </div>
+            </div>
+
+            <div class="gallery-item-large">
+                <div style="background: linear-gradient(135deg, #E31E24, #003DA5); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;"><i class="fas fa-users"></i></div>
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Communautés Africaines</div>
+                    <div class="gallery-overlay-desc">Les peuples qui font vivre le continent avec leur richesse culturelle</div>
+                </div>
+            </div>
+
+            <div class="gallery-item-large">
+                <div style="background: linear-gradient(135deg, #FF6B35, #E31E24); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;"><i class="fas fa-landmark"></i></div>
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Patrimoine Culturel</div>
+                    <div class="gallery-overlay-desc">Les monuments et sites historiques qui témoignent de notre héritage</div>
+                </div>
+            </div>
+
+            <div class="gallery-item-large">
+                <div style="background: linear-gradient(135deg, #003DA5, #26A69A); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;"><i class="fas fa-industry"></i></div>
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Industries Africaines</div>
+                    <div class="gallery-overlay-desc">Les secteurs industriels qui dynamisent les économies africaines</div>
+                </div>
+            </div>
+
+            <div class="gallery-item-large">
+                <div style="background: linear-gradient(135deg, #E31E24, #26A69A); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;"><i class="fas fa-graduation-cap"></i></div>
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Éducation et Formation</div>
+                    <div class="gallery-overlay-desc">Les institutions qui forment les leaders de demain</div>
+                </div>
+            </div>
+
+            <div class="gallery-item-large">
+                <div style="background: linear-gradient(135deg, #FF6B35, #003DA5); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;"><i class="fas fa-tree"></i></div>
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Environnement et Nature</div>
+                    <div class="gallery-overlay-desc">La beauté naturelle et la biodiversité de notre continent</div>
+                </div>
+            </div>
+
+            <div class="gallery-item-large">
+                <div style="background: linear-gradient(135deg, #26A69A, #003DA5); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;"><i class="fas fa-heartbeat"></i></div>
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Santé et Bien-être</div>
+                    <div class="gallery-overlay-desc">Les initiatives pour améliorer la santé publique en Afrique</div>
+                </div>
+            </div>
+
+            <div class="gallery-item-large">
+                <div style="background: linear-gradient(135deg, #FF6B35, #26A69A); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;"><i class="fas fa-laptop"></i></div>
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Technologie et Innovation</div>
+                    <div class="gallery-overlay-desc">Les solutions technologiques qui changent la vie des africains</div>
+                </div>
+            </div>
+
+            <div class="gallery-item-large">
+                <div style="background: linear-gradient(135deg, #E31E24, #FF6B35); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;"><i class="fas fa-shopping-bag"></i></div>
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Commerce et Affaires</div>
+                    <div class="gallery-overlay-desc">Le dynamisme du commerce africain en pleine expansion</div>
+                </div>
+            </div>
+
+            <div class="gallery-item-large">
+                <div style="background: linear-gradient(135deg, #003DA5, #FF6B35); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;"><i class="fas fa-music"></i></div>
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Arts et Musique</div>
+                    <div class="gallery-overlay-desc">L'énergie créative et artistique du continent africain</div>
+                </div>
+            </div>
+
+            <div class="gallery-item-large">
+                <div style="background: linear-gradient(135deg, #26A69A, #E31E24); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;"><i class="fas fa-water"></i></div>
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Ressources Naturelles</div>
+                    <div class="gallery-overlay-desc">L'exploitation durable des richesses naturelles africaines</div>
+                </div>
+            </div>
+
+            <div class="gallery-item-large">
+                <div style="background: linear-gradient(135deg, #FF6B35, #003DA5); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;"><i class="fas fa-globe"></i></div>
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-text">Relations Internationales</div>
+                    <div class="gallery-overlay-desc">L'Afrique sur la scène mondiale et ses partenariats</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>À Propos</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#">Qui sommes-nous</a></li>
+                    <li><a href="#">Notre mission</a></li>
+                    <li><a href="#">Carrières</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contenu</h4>
+                <ul>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="videos.html">Vidéos</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="#">Podcast</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="abonnement.html">Abonnement</a></li>
+                    <li><a href="#">Publicité</a></li>
+                    <li><a href="#">Partenariats</a></li>
+                    <li><a href="#">Contact Presse</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Légal</h4>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Conditions d'utilisation</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">Gestion des cookies</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 RECOR Afrik Mag - Tous droits réservés | Le magazine Panafricain dédié aux entreprises et institutions</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
