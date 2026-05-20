@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - RECOR Afrik Mag</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-text">
+                    <div class="logo-red">RECOR</div>
+                    <div class="logo-blue">Afrik<span class="logo-mag">mag</span></div>
+                    <div class="logo-subtitle">Le magazine Panafricain</div>
+                </div>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="videos.html">Vidéos</a></li>
+                <li><a href="abonnement.html">Abonnement</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Overlay pour mobile -->
+        <div class="menu-overlay"></div>
+
+        <!-- Sidebar Menu pour mobile -->
+        <div class="sidebar-menu">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="videos.html">Vidéos</a></li>
+                <li><a href="abonnement.html">Abonnement</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Nous Contacter</h1>
+        <p>Nous sommes toujours heureux de vous entendre</p>
+    </div>
+
+    <!-- Page Content -->
+    <section class="page-content">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Informations de Contact</h3>
+                
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-detail">
+                        <h4>Adresse</h4>
+                        <p>Abidjan, Côte d'Ivoire<br>Zones 4<br>République de Côte d'Ivoire</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div class="contact-detail">
+                        <h4>Téléphone</h4>
+                        <p>(+225) 27 21 21 73 00<br>(+225) 27 22 22 74 00</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-detail">
+                        <h4>Email</h4>
+                        <p>infos@recordafrikmag.ci<br>editorial@recordafrikmag.ci<br>support@recordafrikmag.ci</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-globe"></i></div>
+                    <div class="contact-detail">
+                        <h4>Site Web</h4>
+                        <p>www.recordafrikmag.ci</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                    <div class="contact-detail">
+                        <h4>Horaires d'Ouverture</h4>
+                        <p>Lundi - Vendredi: 08h00 - 18h00<br>Samedi: 09h00 - 13h00<br>Dimanche: Fermé</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2.5rem;">
+                    <h4 style="color: #003DA5; margin-bottom: 1rem;">Suivez-nous sur les Réseaux Sociaux</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/recordafrikmag" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/recordafrikmag" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/recordafrikmag" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/company/recordafrikmag" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/22527212173" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://youtube.com/recordafrikmag" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Merci pour votre message! Nous reviendrons vers vous dans les 24 heures.');">
+                <div class="form-group">
+                    <label for="name">Nom Complet *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Adresse Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Sujet *</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Catégorie *</label>
+                    <select id="category" name="category" style="width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 0.95rem; font-family: inherit;" required>
+                        <option value="">-- Sélectionnez une catégorie --</option>
+                        <option value="general">Demande Générale</option>
+                        <option value="advertising">Publicité</option>
+                        <option value="partnership">Partenariat</option>
+                        <option value="support">Support Technique</option>
+                        <option value="editorial">Contribution Éditoriale</option>
+                        <option value="feedback">Retours et Suggestions</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <div class="form-group" style="display: flex; align-items: center; gap: 0.5rem;">
+                    <input type="checkbox" id="consent" name="consent" required style="width: auto;">
+                    <label for="consent" style="margin-bottom: 0;">J'accepte la politique de confidentialité</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Envoyer le Message</button>
+            </form>
+        </div>
+
+        <!-- Departments -->
+        <div style="margin-top: 4rem; padding-top: 2rem; border-top: 2px solid #ddd;">
+            <h2 style="color: #003DA5; margin-bottom: 2rem; text-align: center;">Nos Départements</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; border-top: 4px solid #E31E24;">
+                    <h4 style="color: #003DA5; margin-bottom: 0.5rem;"><i class="fas fa-newspaper" style="margin-right: 0.5rem;"></i>Rédaction</h4>
+                    <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Pour les contributions et suggestions d'articles</p>
+                    <p style="color: #999; font-size: 0.9rem;">editorial@recordafrikmag.ci</p>
+                </div>
+
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; border-top: 4px solid #E31E24;">
+                    <h4 style="color: #003DA5; margin-bottom: 0.5rem;"><i class="fas fa-bullhorn" style="margin-right: 0.5rem;"></i>Publicité</h4>
+                    <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Pour les demandes de partenariats publicitaires</p>
+                    <p style="color: #999; font-size: 0.9rem;">advertising@recordafrikmag.ci</p>
+                </div>
+
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; border-top: 4px solid #E31E24;">
+                    <h4 style="color: #003DA5; margin-bottom: 0.5rem;"><i class="fas fa-handshake" style="margin-right: 0.5rem;"></i>Partenariats</h4>
+                    <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Pour les propositions de collaborations</p>
+                    <p style="color: #999; font-size: 0.9rem;">partnerships@recordafrikmag.ci</p>
+                </div>
+
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; border-top: 4px solid #E31E24;">
+                    <h4 style="color: #003DA5; margin-bottom: 0.5rem;"><i class="fas fa-headset" style="margin-right: 0.5rem;"></i>Support Client</h4>
+                    <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Pour l'aide et les problèmes techniques</p>
+                    <p style="color: #999; font-size: 0.9rem;">support@recordafrikmag.ci</p>
+                </div>
+
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; border-top: 4px solid #E31E24;">
+                    <h4 style="color: #003DA5; margin-bottom: 0.5rem;"><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>Informations Générales</h4>
+                    <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Pour toute autre demande</p>
+                    <p style="color: #999; font-size: 0.9rem;">infos@recordafrikmag.ci</p>
+                </div>
+
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; border-top: 4px solid #E31E24;">
+                    <h4 style="color: #003DA5; margin-bottom: 0.5rem;"><i class="fas fa-tv" style="margin-right: 0.5rem;"></i>Presse et Médias</h4>
+                    <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Pour les demandes des journalistes</p>
+                    <p style="color: #999; font-size: 0.9rem;">press@recordafrikmag.ci</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte (placeholder) -->
+        <div style="margin-top: 4rem; padding: 2rem; background: #f8f8f8; border-radius: 8px; text-align: center;">
+            <h3 style="color: #003DA5; margin-bottom: 1rem;">Localisation</h3>
+            <p style="color: #666; margin-bottom: 1rem;">RECOR Afrik Mag est basée à Abidjan, la capitale économique de la Côte d'Ivoire</p>
+            <div style="width: 100%; height: 300px; background: linear-gradient(135deg, #003DA5, #E31E24); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                <i class="fas fa-map-location-dot"></i> Carte Interactive - Abidjan, Côte d'Ivoire
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>À Propos</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#">Qui sommes-nous</a></li>
+                    <li><a href="#">Notre mission</a></li>
+                    <li><a href="#">Carrières</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contenu</h4>
+                <ul>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="videos.html">Vidéos</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="#">Podcast</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="abonnement.html">Abonnement</a></li>
+                    <li><a href="#">Publicité</a></li>
+                    <li><a href="#">Partenariats</a></li>
+                    <li><a href="#">Contact Presse</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Légal</h4>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Conditions d'utilisation</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">Gestion des cookies</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 RECOR Afrik Mag - Tous droits réservés | Le magazine Panafricain dédié aux entreprises et institutions</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
